@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Detect abusiveness test page</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <form action="{{ url_for('abusive_test') }}" method="post" >
+        <input type="text" name="input_text">
+        <input type="submit" value="Submit">
+    </form>
+      
+    <p> Input value: &nbsp; &nbsp;{{ result['input'] }} </p>
+    <p> Tag (abusive=1, non-abusive=0): &nbsp; &nbsp;{{ result['tag'] }} </p>
+    <p> Abusive Words: &nbsp; &nbsp;{{ result['abusive_words'] }} </p>
+  </body>
+</html>
